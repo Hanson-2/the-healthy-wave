@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order Ahead - The Healthy Wave | Text your order for quick pickup">
+    <title>Order Ahead | The Healthy Wave</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="order-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="The Healthy Wave">
+                    <span>The Healthy Wave</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="order-ahead.html" class="btn-order active">Order Ahead</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Order Header -->
+    <section class="order-header">
+        <div class="container">
+            <div class="order-header-content">
+                <div class="header-text">
+                    <h1>Text ahead for quicker service!</h1>
+                    <div class="phone-number">
+                        <i class="fas fa-mobile-alt"></i>
+                        <a href="tel:832-523-3281">832-523-3281</a>
+                    </div>
+                    <p class="header-subtitle">Be sure to let us know if you're new.</p>
+                </div>
+                <div class="header-image">
+                    <div class="order-circle">
+                        <div class="order-circle-content">
+                            <span class="order-text">Text your</span>
+                            <span class="order-text-emphasis">Order</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Instructions -->
+    <section class="order-instructions">
+        <div class="container">
+            <div class="instructions-card">
+                <h2><i class="fas fa-info-circle"></i> Include:</h2>
+                <div class="instructions-list">
+                    <div class="instruction-item">
+                        <i class="fas fa-user"></i>
+                        <span>Your Name</span>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Tea Level & Flavor</span>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="and-or">and/or</span>
+                    </div>
+                    <div class="instruction-item">
+                        <i class="fas fa-utensils"></i>
+                        <span>Meal Option Level & Flavor</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Order Form -->
+    <section class="order-form-section">
+        <div class="container">
+            <div class="form-intro">
+                <h2>Or Order Online</h2>
+                <p>Fill out the form below and we'll receive your order via text message!</p>
+            </div>
+
+            <form id="orderForm" class="order-form" action="https://formsubmit.co/7039158507@vtext.com" method="POST">
+                <!-- FormSubmit Configuration (hidden fields) -->
+                <input type="hidden" name="_subject" value="New Order from Website!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="box">
+                <input type="text" name="_honey" style="display:none">
+                
+                <!-- Customer Info -->
+                <div class="form-section">
+                    <h3><i class="fas fa-user-circle"></i> Your Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerName">
+                                <i class="fas fa-user"></i> Your Name *
+                            </label>
+                            <input type="text" id="customerName" name="customerName" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">
+                                <i class="fas fa-phone"></i> Phone Number *
+                            </label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="832-523-3281" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                            <small>Format: 123-456-7890</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newCustomer" name="newCustomer">
+                            <span>I'm a new customer</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Tea Order -->
+                <div class="form-section">
+                    <h3><i class="fas fa-leaf"></i> LIT TEAS Order</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="teaLevel">
+                                <i class="fas fa-chart-line"></i> Tea Level
+                            </label>
+                            <select id="teaLevel" name="teaLevel">
+                                <option value="">Select Level (optional)</option>
+                                <option value="Regular - 25mg caffeine">Regular (24oz) - 25mg caffeine</option>
+                                <option value="Double - 50mg caffeine">Double (24oz) - 50mg caffeine</option>
+                                <option value="Mega - 75mg caffeine">Mega (32oz) - 75mg caffeine</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="teaFlavor">
+                                <i class="fas fa-ice-cream"></i> Tea Flavor
+                            </label>
+                            <select id="teaFlavor" name="teaFlavor">
+                                <option value="">Select Flavor (optional)</option>
+                                <optgroup label="Popular Flavors">
+                                    <option value="Raspberry">Raspberry</option>
+                                    <option value="Peach">Peach</option>
+                                    <option value="Mango">Mango</option>
+                                    <option value="Dragonfruit">Dragonfruit</option>
+                                    <option value="Strawberry">Strawberry</option>
+                                    <option value="Blueberry">Blueberry</option>
+                                    <option value="Watermelon">Watermelon</option>
+                                    <option value="Pineapple">Pineapple</option>
+                                    <option value="Cranberry">Cranberry</option>
+                                </optgroup>
+                                <optgroup label="More Flavors">
+                                    <option value="Cherry">Cherry</option>
+                                    <option value="Grape">Grape</option>
+                                    <option value="Lemon">Lemon</option>
+                                    <option value="Orange">Orange</option>
+                                    <option value="Coconut">Coconut</option>
+                                    <option value="Pomegranate">Pomegranate</option>
+                                </optgroup>
+                                <optgroup label="Classic Teas">
+                                    <option value="Original">Original (Black Tea)</option>
+                                    <option value="Green Tea">Green Tea</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meal Order -->
+                <div class="form-section">
+                    <h3><i class="fas fa-utensils"></i> Meal Options</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mealType">
+                                <i class="fas fa-bowl-food"></i> Meal Type
+                            </label>
+                            <select id="mealType" name="mealType">
+                                <option value="">Select Type (optional)</option>
+                                <option value="Smoothie">Smoothie</option>
+                                <option value="Waffle">Waffle</option>
+                                <option value="Parfait">Parfait</option>
+                                <option value="Oatmeal">Oatmeal</option>
+                                <option value="Kids Smoothie">Kids Smoothie</option>
+                                <option value="Stacked">Stacked</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mealLevel">
+                                <i class="fas fa-star"></i> Meal Level
+                            </label>
+                            <select id="mealLevel" name="mealLevel">
+                                <option value="">Select Level (optional)</option>
+                                <option value="Gold - 18-20g protein">Gold (18-20g protein)</option>
+                                <option value="Platinum - 24g protein">Platinum (24g protein)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mealFlavor">
+                            <i class="fas fa-ice-cream"></i> Meal Flavor
+                        </label>
+                        <select id="mealFlavor" name="mealFlavor">
+                            <option value="">Select Flavor (optional)</option>
+                            <optgroup label="Vanilla">
+                                <option value="Vanilla - Classic Vanilla">Classic Vanilla</option>
+                                <option value="Vanilla - Birthday Cake">Birthday Cake</option>
+                                <option value="Vanilla - Cake Batter">Cake Batter</option>
+                                <option value="Vanilla - Cheesecake">Cheesecake</option>
+                                <option value="Vanilla - Coconut Cream Pie">Coconut Cream Pie</option>
+                                <option value="Vanilla - Snickerdoodle">Snickerdoodle</option>
+                                <option value="Vanilla - Sugar Cookie">Sugar Cookie</option>
+                                <option value="Vanilla - Vanilla Wafer">Vanilla Wafer</option>
+                            </optgroup>
+                            <optgroup label="Chocolate">
+                                <option value="Chocolate - Chocolate">Chocolate</option>
+                                <option value="Chocolate - Brownie Batter">Brownie Batter</option>
+                                <option value="Chocolate - Chocolate Chip Cookie Dough">Chocolate Chip Cookie Dough</option>
+                                <option value="Chocolate - Chocolate Covered Pretzel">Chocolate Covered Pretzel</option>
+                                <option value="Chocolate - Chocolate Mint">Chocolate Mint</option>
+                                <option value="Chocolate - Cookies & Cream">Cookies & Cream</option>
+                                <option value="Chocolate - German Chocolate Cake">German Chocolate Cake</option>
+                                <option value="Chocolate - Samoa (Caramel deLite)">Samoa (Caramel deLite)</option>
+                                <option value="Chocolate - S'mores">S'mores</option>
+                                <option value="Chocolate - Thin Mint">Thin Mint</option>
+                            </optgroup>
+                            <optgroup label="Coffee Lover">
+                                <option value="Coffee - Caramel Macchiato">Caramel Macchiato</option>
+                                <option value="Coffee - Cinnamon Roll">Cinnamon Roll</option>
+                                <option value="Coffee - Iced Cafe Mocha">Iced Cafe Mocha</option>
+                                <option value="Coffee - Pumpkin Spice Latte">Pumpkin Spice Latte</option>
+                                <option value="Coffee - White Chocolate Mocha">White Chocolate Mocha</option>
+                            </optgroup>
+                            <optgroup label="Banana">
+                                <option value="Banana - Banana Bread">Banana Bread</option>
+                                <option value="Banana - Banana Cream Pie">Banana Cream Pie</option>
+                                <option value="Banana - Banana Nut Muffin">Banana Nut Muffin</option>
+                                <option value="Banana - Hummingbird Cake">Hummingbird Cake</option>
+                            </optgroup>
+                            <optgroup label="P.B. Lover">
+                                <option value="PB - Chocolate Peanut Butter">Chocolate Peanut Butter</option>
+                                <option value="PB - Peanut Butter">Peanut Butter</option>
+                                <option value="PB - Peanut Butter Cup">Peanut Butter Cup</option>
+                                <option value="PB - Peanut Butter Tagalong">Peanut Butter Tagalong</option>
+                                <option value="PB - White Chocolate Peanut Butter">White Chocolate Peanut Butter</option>
+                            </optgroup>
+                            <optgroup label="Fruit Fan">
+                                <option value="Fruit - Apple Pie">Apple Pie</option>
+                                <option value="Fruit - Banana Split">Banana Split</option>
+                                <option value="Fruit - Blackberry Cobbler">Blackberry Cobbler</option>
+                                <option value="Fruit - Blueberry Muffin">Blueberry Muffin</option>
+                                <option value="Fruit - Cinnamon Apple Crisp">Cinnamon Apple Crisp</option>
+                                <option value="Fruit - Orange Creamsicle">Orange Creamsicle</option>
+                                <option value="Fruit - Peach Cobbler">Peach Cobbler</option>
+                                <option value="Fruit - Pineapple Upside Down Cake">Pineapple Upside Down Cake</option>
+                                <option value="Fruit - Strawberry Shortcake">Strawberry Shortcake</option>
+                                <option value="Fruit - Very Berry">Very Berry</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Boost Options -->
+                <div class="form-section">
+                    <h3><i class="fas fa-rocket"></i> Boost It!</h3>
+                    <div class="boost-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Fat Release">
+                            <span>Fat Release</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Collagen">
+                            <span>Collagen</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Electrolytes">
+                            <span>Electrolytes</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Protein Boost">
+                            <span>Protein Boost</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Immunity">
+                            <span>Immunity</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Stress Relief">
+                            <span>Stress Relief</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Fiber">
+                            <span>Fiber</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Joint Support">
+                            <span>Joint Support</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Digestive Health">
+                            <span>Digestive Health</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Beauty">
+                            <span>Beauty</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Caffeine">
+                            <span>Caffeine</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Metabolism">
+                            <span>Metabolism</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="boosts" value="Energy">
+                            <span>Energy</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Additional Notes -->
+                <div class="form-section">
+                    <h3><i class="fas fa-comment-dots"></i> Special Instructions</h3>
+                    <div class="form-group">
+                        <label for="specialInstructions">Any special requests or modifications?</label>
+                        <textarea id="specialInstructions" name="specialInstructions" rows="4" placeholder="Extra ice, light sugar, etc."></textarea>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send My Order</span>
+                    </button>
+                    <p class="form-note">Your order will be sent as a text message to The Healthy Wave!</p>
+                </div>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="success-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Order Form Opened!</h3>
+                    <p>Your email client should open with the order details.</p>
+                    <p class="success-phone">Click 'Send' in your email to deliver the order via text message.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Call or Text</h4>
+                        <a href="tel:832-523-3281">832-523-3281</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Visit Us</h4>
+                        <p>League City, TX</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>Mon-Sat: 7am-4pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Healthy Wave</h3>
+                    <p>Premium nutrition drinks in League City, Texas</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Healthy Wave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="order-script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
